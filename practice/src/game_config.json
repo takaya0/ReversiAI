@@ -1,0 +1,5 @@
+{
+    "BOARD_SIZE" : 400,
+    "CPU_NAME" : "cpu",
+    "AI_ASSIST" : true
+}
