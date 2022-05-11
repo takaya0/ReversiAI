@@ -5,6 +5,9 @@ import tkinter.messagebox
 import json
 import torch
 
+import sys
+import time
+
 from players import DQN_Player
 
 config_file_path = 'game_config.json'
@@ -253,6 +256,9 @@ class Reversi():
             if self.turn_player is None:
                 # ゲーム終了
                 self.show_result()
+
+                time.sleep(5)
+                sys.exit()
                 return
 
         legal_places = self.get_legal_places()
@@ -392,7 +398,7 @@ class Reversi():
 def main():
     app = tkinter.Tk()
     app.title('Reversi')
-    ReversiGame = Reversi(app, config_file_path, 'models/dqn_model.pt')
+    ReversiGame = Reversi(app, config_file_path, 'models/dqn_model_2.pt')
     app.mainloop()
 
 
